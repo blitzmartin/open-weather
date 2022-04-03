@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lato&display=swap');
 
 :root {
-    --col-light: white;
+    --col-light: rgb(255, 255, 255);
     --col-dark: rgb(43, 43, 43);
     --col-accent: rgb(30, 22, 119);
     --font-primary: 'Lato', sans-serif;
@@ -17,15 +17,20 @@
 }
 
 body {
-    margin: 2rem 5rem;
+    padding: 2rem 0;
     text-align: center;
     font-family: var(--font-primary);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(180deg, rgb(243, 50, 28), rgb(239, 195, 18));
 }
 
 h1 {
-    color:var(--col-accent);
-    font-size: 3rem;
-    margin-bottom: 2.7rem;
+    color:var(--col-light);
+    font-size: 4rem;
+    margin-bottom: 4.2rem;
 }
 
 table {
@@ -34,19 +39,20 @@ table {
     font-size: 2.2rem;
     padding: 2rem;
     background-color: var(--col-light);
+    box-shadow: 2px 2px 20px 2px #1b1b1b;
 }
 
 table, th, td {
-    border: 1px solid var(--col-accent);
+    border: 2px solid var(--col-accent);
     border-collapse: collapse;
 }
 
 th {
     background-color: var(--col-accent);
     color: var(--col-light);
-    padding: 1.5rem 1.2rem;
+    padding: 1.5rem 2rem;
 }
 
 td {
-    padding: 1rem 1.2rem;
+    padding: 1rem 2rem;
 }
