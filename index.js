@@ -2,11 +2,12 @@
 const table = document.getElementById('table');
 
 class cityCreator {
-    constructor(name, country, weather, temp) {
+    constructor(name, country, weather, temp, icon) {
         this.name = name;
         this.country = country;
         this.weather = weather;
         this.temp = temp;
+        this.icon = icon;
     }
 }
 
@@ -30,10 +31,11 @@ fetch(URL)
 
             let name = data.list[i].name;
             let country = data.list[i].sys.country;
-            let weather = data.list[i].weather[0].description;
             let temp = data.list[i].main.temp;
+            let weather = data.list[i].weather[0].description;
+            let icon = data.list[i].weather[0].icon;
 
-            let obj = new cityCreator(name, country, weather, temp);
+            let obj = new cityCreator(name, country, temp, weather, icon);
             citiesArray.push(obj);
         }
         weatherTable(citiesArray);
@@ -49,26 +51,22 @@ fetch(URL)
 
 function weatherTable(arr) {
     for (let i = 0; i < arr.length; i++) {
-        let newRow = document.createElement('tr');   
+        let newRow = document.createElement('tr');
         table.appendChild(newRow);
         for (const [key, value] of Object.entries(arr[i])) {
-            let newCell = document.createElement('td');
-            newRow.appendChild(newCell);
-            newCell.innerHTML = `${value}`;
+            if (key !== 'icon'){
+                let newCell = document.createElement('td');
+                newRow.appendChild(newCell);
+                newCell.innerHTML = `${value}`;
+            }
         }
+        let newCell = document.createElement('td');
+        let iconDiv = document.createElement('div');
+        let newIcon = document.createElement('img');
+        let imgSrc = `http://openweathermap.org/img/w/${arr[i].icon}.png`;
+        newIcon.src = imgSrc;
+        newRow.appendChild(newCell);
+        newCell.appendChild(iconDiv);
+        iconDiv.appendChild(newIcon);
     }
 }
-
-
-
-
-// OLD CODE TO GET WEATHER OF CITY
-
-/* 
-            const description = data.weather[0].description;
-            const innerText = `🌞 Today the weather forecast 🌡 in ${data.name} is ${description}`
-            document.querySelector("body > h1").innerHTML = innerText;
-        
-            const imgSrc = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;                      
-            document.querySelector("body > img").src = imgSrc;
- */
