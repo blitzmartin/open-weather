@@ -30,7 +30,7 @@ fetch(URL)
         for (let i = 0; i < data.list.length; i++) {
 
             let name = data.list[i].name;
-            let country = data.list[i].sys.country;
+            let country = getName(countries, data.list[i].sys.country);
             let temp = data.list[i].main.temp;
             let weather = data.list[i].weather[0].description;
             let icon = data.list[i].weather[0].icon;
@@ -70,3 +70,9 @@ function weatherTable(arr) {
         iconDiv.appendChild(newIcon);
     }
 }
+
+function getName(obj, countryId) {   //uses countries object for full name of country
+    return (obj[countryId]);
+}
+
+
