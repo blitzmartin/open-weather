@@ -1,0 +1,42 @@
+:root {
+    --col-light: white;
+    --col-dark: rgb(43, 43, 43);
+    --col-accent: rgb(30, 22, 119);
+    --font-primary: Arial, Helvetica, sans-serif; 
+    --font-accent: Georgia, serif;
+}
+
+*,
+* ::after,
+* ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 2rem 5rem;
+    text-align: center;
+    font-family: var(--font-primary);
+}
+
+h1 {
+    color:var(--col-accent);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+table, th, td {
+    border: 1px solid var(--col-accent);
+    border-collapse: collapse;
+}
+
+th {
+    background-color: var(--col-accent);
+    color: var(--col-light);
+    padding: 0.5rem 1rem;
+}
+
+td {
+    padding: 0.5rem 1rem;
+}
