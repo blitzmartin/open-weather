@@ -25,7 +25,7 @@ fetch(URL)
     })
 
     .then(function (data) {
-        console.log(data.list);
+
         for (let i = 0; i < data.list.length; i++) {
 
             let name = data.list[i].name;
@@ -36,7 +36,6 @@ fetch(URL)
             let obj = new cityCreator(name, country, weather, temp);
             citiesArray.push(obj);
         }
-        console.log(citiesArray);
         weatherTable(citiesArray);
         return
     })
