@@ -52,7 +52,6 @@ function weatherTable(arr) {
         let newRow = document.createElement('tr');   
         table.appendChild(newRow);
         for (const [key, value] of Object.entries(arr[i])) {
-            console.log(`${value}`);
             let newCell = document.createElement('td');
             newRow.appendChild(newCell);
             newCell.innerHTML = `${value}`;
