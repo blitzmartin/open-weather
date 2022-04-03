@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lato&display=swap');
+
 :root {
     --col-light: white;
     --col-dark: rgb(43, 43, 43);
     --col-accent: rgb(30, 22, 119);
-    --font-primary: Arial, Helvetica, sans-serif; 
-    --font-accent: Georgia, serif;
+    --font-primary: 'Lato', sans-serif;
+    --font-accent: 'Inter', sans-serif;
 }
 
 *,
@@ -17,21 +19,21 @@
 body {
     margin: 2rem 5rem;
     text-align: center;
-
     font-family: var(--font-primary);
 }
 
 h1 {
     color:var(--col-accent);
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2.7rem;
 }
 
 table {
     margin-left: auto;
     margin-right: auto;
-    font-size: 2rem;
+    font-size: 2.2rem;
     padding: 2rem;
+    background-color: var(--col-light);
 }
 
 table, th, td {
@@ -42,9 +44,9 @@ table, th, td {
 th {
     background-color: var(--col-accent);
     color: var(--col-light);
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 1.2rem;
 }
 
 td {
-    padding: 0.5rem 1rem;
+    padding: 1rem 1.2rem;
 }
