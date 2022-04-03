@@ -39,7 +39,7 @@ table {
     font-size: 2.2rem;
     padding: 2rem;
     background-color: var(--col-light);
-    box-shadow: 2px 2px 20px 2px #1b1b1b;
+    box-shadow: 0 10px 17px 2px #1b1b1b;
 }
 
 table, th, td {
