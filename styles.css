@@ -36,7 +36,7 @@ h1 {
 table {
     margin-left: auto;
     margin-right: auto;
-    font-size: 2.2rem;
+    font-size: 2rem;
     padding: 2rem;
     background-color: var(--col-light);
     box-shadow: 0 10px 17px 2px #1b1b1b;
@@ -51,6 +51,7 @@ th {
     background-color: var(--col-accent);
     color: var(--col-light);
     padding: 1.5rem 2rem;
+    font-weight: lighter;
 }
 
 td {
